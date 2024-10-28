@@ -1,18 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>多网站管理器</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
-    />
-    <script type="module" crossorigin src="/assets/index-21223f45.js"></script>
-  </head>
-  <body>
-    <div id="root" style="height: 100vh"></div>
-    
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Manager</title>
+    <link rel="stylesheet" href="../styles.css"> <!-- 更新路径 -->
+</head>
+<body>
+    <div id="app">
+        <h1>网站管理器</h1>
+        
+        <div id="add-sites">
+            <h2>批量添加网站</h2>
+            <textarea id="site-urls" placeholder="输入网站URL，每行一个"></textarea>
+            <button id="add-sites-btn">添加网站</button>
+        </div>
+
+        <div id="site-list">
+            <h2>网站列表</h2>
+            <ul id="sites"></ul>
+        </div>
+
+        <div id="control-panel">
+            <h2>控制面板</h2>
+            <button id="start-recording" onclick="startRecording()">开始录制</button>
+            <button id="stop-recording" onclick="stopRecording()">停止录制</button>
+            <button id="playback" onclick="playbackActions()">回放操作</button>
+        </div>
+    </div>
+
+    <script src="../recorder.js"></script> <!-- 更新路径 -->
+</body>
 </html>
